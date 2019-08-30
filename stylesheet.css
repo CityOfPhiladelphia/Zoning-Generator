@@ -1,0 +1,223 @@
+.leaflet-control-geocoder a {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: block;
+}
+
+.leaflet-control-geocoder {
+	box-shadow: 0 1px 7px #999;
+	background: #f8f8f9;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.leaflet-control-geocoder a {
+	background-image: url(images/geocoder.png);
+	width: 36px;
+	height: 36px;
+}
+
+.leaflet-touch .leaflet-control-geocoder a {
+	width: 44px;
+	height: 44px;
+}
+
+.leaflet-control-geocoder .leaflet-control-geocoder-form,
+.leaflet-control-geocoder-expanded .leaflet-control-geocoder-toggle {
+	display: none;
+}
+
+.leaflet-control-geocoder-expanded .leaflet-control-geocoder-form {
+	display: block;
+	position: relative;
+}
+
+.leaflet-control-geocoder-expanded .leaflet-control-geocoder-form {
+	padding: 5px;
+}
+
+#map {
+	position: relative;
+	width: 100%;
+	height: 40vh;
+}
+
+.LogoWrapper{
+	position:fixed;
+	bottom:30px;
+	width:100%;
+	display: block;
+	clear:both;
+	background:white;
+}
+.PCPC-Logo {
+    width: 250px !important;
+    max-width: 250px !important;
+	height: auto !important;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.PCPC-Logo-print{
+	width: 350px !important;
+    max-width: 350px !important;
+	height: auto !important;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#search{
+	margin:8px 15px;
+	width:100%;
+}
+
+#addr{
+	width: 40%;
+	float: left;
+	vertical-align: middle;
+}
+
+#btnSearch{
+	float: left;
+	vertical-align: middle;
+	width: 45px;
+}
+
+#PrintBtn{
+	width: 100%;
+	position: sticky;
+	position: -webkit-sticky; /* Safari */
+	top: 5px;
+}
+
+#btnPrint{
+	margin-right:15px;
+	float:right;
+}
+
+.arcgisSearch .searchGroup .searchInput {
+      width: 15.625rem;
+	}
+@media print {
+	.noprint {display:none !important;}
+	a:link{
+		text-decoration: underline;
+	}
+	a:link:after, a:visited:after {  
+		content: "";    
+	}
+	#application {display:none !important;}
+	#search {display:none !important;}
+	#results {display:none !important;}
+	div.set {page-break-inside:avoid;}
+	.LogoWrapper {display:none !important;}
+	#PrintBtn {display:none !important;}
+}
+
+@media screen{
+	#printHeader {display:none !important;}
+	#printMap {display:none !important;}
+}
+
+#site-wide-alert button.close-button {
+    color: white;
+}
+.close-button, .close-button.medium {
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 1em;
+    line-height: .5;
+}
+
+.close-button {
+    position: absolute;
+    color: #444;
+    cursor: pointer;
+}
+
+.footer-p{
+	color: white;
+	font-size: 85%;
+}
+
+.zoningInfo::after{
+	height: 50px;
+}
+body::after {
+	content: '';
+	display: block;
+	height: 150px; /* Set same as footer's height */
+}
+
+#Disclosure{
+	font-size: 95%;
+	font-style: italic;
+	text-align: center;
+}
+#DisclosureP2{
+	font-size: 95%;
+	font-style: italic;
+	text-align: center;
+}
+h1:empty{
+	display:none;
+}
+h2:empty{
+	display:none;
+}
+h3:empty{
+	display:none;
+}
+p:empty{
+	display:none;
+}
+element:empty{
+	display:none;
+}
+b:empty{
+	display:none;
+}
+table:empty{
+	display:none;
+}
+#set:empty{
+	display:none;
+}
+sup {
+    vertical-align: top;
+    font-size: smaller;
+}
+a:link{
+	font-weight: 600;
+}
+
+.leaflet-control-zoomhome a {
+    font: bold 18px "Lucida Console",Monaco,monospace;
+}
+
+a.leaflet-control-zoomhome-in,
+a.leaflet-control-zoomhome-out {
+  font-size: 1.5em;
+  line-height: 26px;
+}
+#map2{
+	width: 50%;
+	height: 40vh;
+	float: left;
+}
+
+#ZoningInfoPanel{
+	float: left;
+	padding: 5%;
+}
+
+#search2{
+	margin:8px 10px;
+	width:100%;
+}

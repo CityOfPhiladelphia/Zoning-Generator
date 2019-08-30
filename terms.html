@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset=utf-8 />
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoning Summary Generator | City of Philadelphia</title>
+  <link rel="stylesheet" type="text/css" href="phila-standards/css/phila-app.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://standards.phila.gov/img/favicon.png">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="Digital Standards | City of Philadelphia">
+  <meta property="og:image" content="https://beta.phila.gov/media/20160715133810/phila-gov.jpg">
+
+  <title>Zoning Summary Generator</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <!-- Load Leaflet from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js" integrity="sha512-YZ6b5bXRVwipfqul5krehD9qlbJzc6KOGXYsDjU9HHXW2gK57xmWl2gU6nAegiErAqFXhygKIsWPKbjLPXVb2g=="
+    crossorigin=""></script>
+
+  <!--JSON file with zoning code information-->
+  <script type="text/javascript" src="tables/baseDistricts.json"></script>
+
+  <!--JSON file with overlay code information -->
+  <script type="text/javascript" src="tables/overlaysNew.json"></script>
+
+  <!--JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+  <!--Bootstrap CSS
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ -->
+
+</head>
+
+<body lang="en">
+    <div id="printHeader">
+        <div class="columns">
+          <a href="http://beta.phila.gov/" class="logo">
+            <img src="images/DPD_BELL_logo.jpg" width="360" alt="Dept. of Planning and Development Logo">
+          </a>
+          <div class="app-divide"></div>
+          <div class="page-title-container">
+            <!-- <a href="#/"> -->
+            <h2 class="page-title">Zoning Summary Generator: By-Right Zoning Information</h2>
+            <!-- </a> -->
+          </div>
+    </div>
+  </div>
+<div id="application">
+  <!-- Begin header -->
+  <header class="site-header app group">
+    <div class="row expanded">
+      <!-- if you don't want a full-width header, remove the expanded class -->
+      <div class="columns">
+        <a href="http://beta.phila.gov/" class="logo">
+          <img src="https://standards.phila.gov/img/logo/city-of-philadelphia-yellow-white.png" alt="City of Philadelphia">
+        </a>
+        <div class="app-divide"></div>
+        <div class="page-title-container">
+          <!-- <a href="#/"> -->
+          <h1 class="page-title">Zoning Summary Generator</h1>
+          <h2 class="page-subtitle">By-Right Zoning Information</h2>
+          <!-- </a> -->
+        </div>
+        <div class="app-buttons">
+          <!-- <a href="https://www.phila.gov/commerce/realEstate/developerServices/Pages/default.aspx" class="button">Development Services</a>
+          <a href="https://www.phila.gov/departments/department-of-planning-and-development/"><img class="PCPC-Logo"
+              src="images/DPD_Logo.png" alt="DPD Logo"></a> -->
+        </div>
+      </div>
+    </div>
+  </header>
+    <div class="app-nav">
+      <div class="row expanded">
+        <div class="columns">
+          <nav>
+            <ul>
+              <li>
+                  <a href="https://www.phila.gov/media/20190212105254/FINAL-Permit-Checklist_January2019.1-1.pdf"  target='_blank'><b>Development Checklist</b></a>
+                </li>
+                <li>
+                  <a href="https://www.phila.gov/departments/department-of-planning-and-development/development-services/"  target='_blank'><b>Development Services</b></a>
+                </li>
+                <li>
+                  <a href="https://atlas.phila.gov"  target='_blank'><b>Additional Property Info</b></a>
+                </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <main>
+
+    </main>
+    <div id="site-wide-alert" data-closable >
+      <div class="row">
+        <div class="medium-23 medium-centered" style="text-align: center;" >
+          <b>This site is currently being tested. If you notice anything strange or have any suggestions please <a href="mailto:planning.development@phila.gov"><b>let us know</b></a>!</b>
+        </div>
+      </div>
+    </div>
+    <div class="app-footer anchor">
+      <!-- remove the anchor class if you want to handle footer placement yourself, otherwise it will be postion: fixed -->
+      <footer>
+        <div class="row expanded">
+          <div class="columns">
+            <nav>
+              <ul class="inline-list">
+                <li>
+                  <a href='mailto:Planning.Development@phila.gov'>Feedback</a>
+                </li>
+                <li>
+                  <a href="#">Terms of Use</a>
+                </li>
+                <li>
+                  <a href="https://atlas.phila.gov"  target='_blank'>Atlas</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div id="zoningInfo">
+        <div class="set">
+         <div class="row">
+           <div class="columns">
+             <h1>Terms of Use</h1>
+           </div>
+         </div>
+       </div>
+       <div class="set">
+         <div class="row">
+           <div class="columns">
+             <p>The information contained within the Zoning Summary Generator App (“the App”) is derived from the City of Philadelphia’s GIS Database and other outside sources.  The data in the app are not a survey-quality product.  Neither the data shown here nor the associated metadata are guaranteed to be correct or complete.  Zoning maps and policies are dynamic information, and the information displayed by this app may not be the most updated version of the available information.</p>
+             <p>Unauthorized copying, reproduction, republishing, uploading, downloading, posting, transmitting or duplicating any of the material is prohibited. You may download or copy any downloadable materials displayed through the Zoning Summary Generator App at a phila.gov address only for home, noncommercial, and personal use only, provided that you maintain all copyright, trademark and other notices contained in such material and you agree to abide by all additional copyright notices, information or restrictions contained in any material accessed through the web site.</p>
+             <p>The information provided on this web site, and its links to other related web sites, are provided as a courtesy to our web site visitors only, and are in no manner an endorsement, recommendation, or approval of any person, any product, or any service contained on any other web site.</p>
+             <p>The City of Philadelphia makes no representations regarding users’ rights with regards to outside websites linked to in the App, including but not limited to amlegal.com and govinfo.gov.</p>
+             <p>The app and all materials contained on it are distributed and transmitted on an "as is" and "as available" basis without any warranties of any kind, whether expressed or implied. The end user assumes  all risk of using this information.  The City of Philadelphia assumes no liability for any damages or loss of any kind that might arise from the use of, misuse of, or the inability to use the City's web site and/or the materials contained on the web site. The City of Philadelphia retains the right to edit or remove any content on its website at any time and without prior notice. Information provided on the City of Philadelphia's web site should not be used as a substitute for legal, accounting, real estate, business, tax, or other professional advice.</p>
+             <p>No information here is legally binding, and nothing stated here represents an official opinion of the City of Philadelphia or any of its departments, boards, commissions, officials, or employees.</p>
+           </div>
+         </div>
+         </div>
+         <div class="row">
+             <div class="column">
+                    <a href="Default.html" class="button">Agree and Return to App</a>
+             </div>
+         </div>
+         </div>
+
+         <div class="LogoWrapper">
+            <a href="https://www.phila.gov/departments/department-of-planning-and-development/"><img class="PCPC-Logo" src="images/DPD_BELL_logo.jpg" alt="DPD Logo">
+            </div>
+  <link rel="stylesheet" href="stylesheet.css" /> 
+</body>
+
+
+</html>
