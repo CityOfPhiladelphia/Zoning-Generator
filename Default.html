@@ -139,7 +139,8 @@
       </footer>
     </div>
   </div>
-  <div id="map"></div>
+  <div id="map">
+  </div>
   <div id="search">
     <input type="text" name="addr" placeholder="Search the map" value="" id="addr" size="58" onkeydown="if (event.keyCode == 13)
     {document.getElementById('btnSearch').click(); return false;}" />
@@ -159,10 +160,14 @@
 </div>
 <div class="set">
   <div class="row">
+    <div>
+        <table id="pendingZoningAlert"></table>
+      </div>
     <div class="columns">
       <h2 id="baseZoningTitle">To use the Zoning Summary Generator, enter your address in the search bar, and press enter. Then look at the map to make sure that the right property has been selected.</h2>
     </div>
   </div>
+</div>
   <div class="row">
     <div class="columns"><b id="baseZoning"></b></div>
     <div class="columns">
@@ -300,6 +305,9 @@
     </div>
     <div class="columns">
       <p id="overlaySubheading"></p>
+    </div>
+    <div>
+      <table id="pendingOverlayAlert"></table>
     </div>
   </div>
   <div class="row">

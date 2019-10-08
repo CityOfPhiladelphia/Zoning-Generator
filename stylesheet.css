@@ -101,6 +101,31 @@
 	float:right;
 }
 
+.button{
+	margin: 2px;
+}
+
+a.button {
+	color: black;
+}
+
+#zoningButton{
+	position: relative;
+	display: block;
+	right: 0px;
+	top: 5px;
+	z-index: 800;
+	pointer-events: auto;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 3px;
+}
+
+.leaflet-disabled{
+	background-color: gray
+}
+
 .arcgisSearch .searchGroup .searchInput {
       width: 15.625rem;
 	}
