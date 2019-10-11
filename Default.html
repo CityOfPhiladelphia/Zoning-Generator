@@ -42,7 +42,6 @@
   <!--Home extent js-->
   <script type="text/javascript" src="js/leaflet.zoomhome.min.js"></script>
 
-
   <!--Bootstrap CSS
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
  -->
@@ -52,13 +51,13 @@
 <body lang="en">
   <div id="printHeader">
       <div class="columns">
-        <a href="http://beta.phila.gov/" class="logo">
+        <a href="https://www.phila.gov/departments/department-of-planning-and-development/" class="logo">
           <img src="images/DPD_BELL_logo.jpg" width="360" alt="Dept. of Planning and Development Logo">
         </a>
         <div class="app-divide"></div>
         <div class="page-title-container">
           <!-- <a href="#/"> -->
-          <h2 class="page-title">Zoning Summary Generator: By-Right Zoning Information</h2>
+          <h1 class="page-title">Zoning Summary Generator: By-Right Zoning Information</h1>
           <!-- </a> -->
         </div>
   </div>
@@ -69,13 +68,13 @@
       <div class="row expanded">
         <!-- if you don't want a full-width header, remove the expanded class -->
         <div class="columns">
-          <a href="http://beta.phila.gov/" class="logo">
-            <img src="https://standards.phila.gov/img/logo/city-of-philadelphia-yellow-white.png" alt="City of Philadelphia">
+          <a href="https://www.phila.gov/departments/department-of-planning-and-development/" class="DPDLogo">
+            <img src="images/DPDBELLlogo.png" alt="City of Philadelphia">
           </a>
           <div class="app-divide"></div>
           <div class="page-title-container">
             <!-- <a href="#/"> -->
-            <h1 class="page-title">Zoning Summary Generator</h1>
+            <h1 class="page-title">Zoning Summary Generator</h1><h6>BETA</h6>
             <h2 class="page-subtitle">By-Right Zoning Information</h2>
             <!-- </a> -->
           </div>
@@ -107,13 +106,6 @@
       </div>
     </div>
     <main>
-      <div id="site-wide-alert" data-closable >
-        <div class="row">
-          <div class="medium-23 medium-centered" style="text-align: center;" >
-            <b>This site is currently being tested. If you notice anything strange or have any suggestions please <a href="mailto:planning.development@phila.gov"><b>let us know</b></a>!</b>
-          </div>
-        </div>
-      </div>
     </main>
 
     <div class="app-footer anchor">
@@ -124,8 +116,16 @@
             <nav>
               <ul class="inline-list">
                 <li>
-                  <a href='mailto:Planning.Development@phila.gov'>Feedback</a>
+                  <a href="#open-modal">Feedback</a>
                 </li>
+                <div id="open-modal" class="modal-window">
+                  <div>
+                    <a href="#" title="Close" class="modal-close"><i class="fa fa-window-close" aria-hidden="true"></i></a>
+                    <div>
+                      This site is currently being tested. If you notice anything strange or have any suggestions please <a href="mailto:planning.development@phila.gov">let us know</a>!
+                    </div>
+                  </div>
+                </div>
                 <li>
                   <a href="terms.html">Terms of Use</a>
                 </li>
@@ -164,7 +164,7 @@
         <table id="pendingZoningAlert"></table>
       </div>
     <div class="columns">
-      <h2 id="baseZoningTitle">To use the Zoning Summary Generator, enter your address in the search bar, and press enter. Then look at the map to make sure that the right property has been selected.</h2>
+      <h2 id="baseZoningTitle">To find a property's zoning information, enter the address in the search bar.</h2>
     </div>
   </div>
 </div>
@@ -355,11 +355,6 @@
     </div>
 </div>
 </div>
-
-<div class="LogoWrapper">
-<a href="https://www.phila.gov/departments/department-of-planning-and-development/"><img class="PCPC-Logo" src="images/DPD_BELL_logo.jpg" alt="DPD Logo">
-</div>
-
   <script src="js/map.js"></script>
   <link rel="stylesheet" href="stylesheet.css" /> 
 </body>
