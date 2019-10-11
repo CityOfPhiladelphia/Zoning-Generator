@@ -38,6 +38,9 @@
   <!--JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+  <!--Font Awesome Link-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 
   <!--Bootstrap CSS
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -65,8 +68,8 @@
     <div class="row expanded">
       <!-- if you don't want a full-width header, remove the expanded class -->
       <div class="columns">
-        <a href="http://beta.phila.gov/" class="logo">
-          <img src="https://standards.phila.gov/img/logo/city-of-philadelphia-yellow-white.png" alt="City of Philadelphia">
+        <a href="https://www.phila.gov/departments/department-of-planning-and-development/" class="DPDLogo">
+          <img src="images/DPDBELLlogo.png" alt="City of Philadelphia">
         </a>
         <div class="app-divide"></div>
         <div class="page-title-container">
@@ -105,35 +108,36 @@
     <main>
 
     </main>
-    <div id="site-wide-alert" data-closable >
-      <div class="row">
-        <div class="medium-23 medium-centered" style="text-align: center;" >
-          <b>This site is currently being tested. If you notice anything strange or have any suggestions please <a href="mailto:planning.development@phila.gov"><b>let us know</b></a>!</b>
-        </div>
-      </div>
-    </div>
     <div class="app-footer anchor">
-      <!-- remove the anchor class if you want to handle footer placement yourself, otherwise it will be postion: fixed -->
-      <footer>
-        <div class="row expanded">
-          <div class="columns">
-            <nav>
-              <ul class="inline-list">
-                <li>
-                  <a href='mailto:Planning.Development@phila.gov'>Feedback</a>
-                </li>
-                <li>
-                  <a href="#">Terms of Use</a>
-                </li>
-                <li>
-                  <a href="https://atlas.phila.gov"  target='_blank'>Atlas</a>
-                </li>
-              </ul>
-            </nav>
+        <!-- remove the anchor class if you want to handle footer placement yourself, otherwise it will be postion: fixed -->
+        <footer>
+          <div class="row expanded">
+            <div class="columns">
+              <nav>
+                <ul class="inline-list">
+                  <li>
+                    <a href="#open-modal">Feedback</a>
+                  </li>
+                  <div id="open-modal" class="modal-window">
+                    <div>
+                      <a href="#" title="Close" class="modal-close"><i class="fa fa-window-close" aria-hidden="true"></i></a>
+                      <div>
+                        This site is currently being tested. If you notice anything strange or have any suggestions please <a href="mailto:planning.development@phila.gov">let us know</a>!
+                      </div>
+                    </div>
+                  </div>
+                  <li>
+                      <a href="#">Terms of Use</a>
+                  </li>
+                  <li>
+                      <a href="https://atlas.phila.gov"  target='_blank'>Atlas</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
-        </div>
-      </footer>
-    </div>
+        </footer>
+      </div>
   </div>
 
   <div id="zoningInfo">
@@ -158,14 +162,10 @@
          </div>
          <div class="row">
              <div class="column">
-                    <a href="Default.html" class="button">Agree and Return to App</a>
+                    <a href="Default.html" class="button">Return to App</a>
              </div>
          </div>
          </div>
-
-         <div class="LogoWrapper">
-            <a href="https://www.phila.gov/departments/department-of-planning-and-development/"><img class="PCPC-Logo" src="images/DPD_BELL_logo.jpg" alt="DPD Logo">
-            </div>
   <link rel="stylesheet" href="stylesheet.css" /> 
 </body>
 
