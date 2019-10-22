@@ -51,6 +51,7 @@ $(function () {
                 }
             });
             document.getElementById("historicHeading").innerHTML = ""
+            document.getElementById("historicInfo").innerHTML = ""
             var query_historicLocalSites = L.esri.query({
                 url: 'https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/Historic_sites_PhilReg/FeatureServer/0'
             });
@@ -61,7 +62,7 @@ $(function () {
                     document.getElementById("localHistoricSites").innerHTML = "";
                 }
                 else {
-                    document.getElementById("localHistoricSites").innerHTML = "This structure is historically designated. Historical Commission review would be required prior to obtaining zoning or building permits.  If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
+                    document.getElementById("historicInfo").innerHTML = "This parcel is locally historically designated. Historical Commission review would be required prior to obtaining zoning or building permits. If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
                     document.getElementById("historicHeading").innerHTML = "Historic Designation"
                 }
             });
@@ -76,7 +77,7 @@ $(function () {
                     document.getElementById("localHistoricDistricts").innerHTML = "";
                 }
                 else {
-                    document.getElementById("localHistoricDistricts").innerHTML = "This Parcel is within a local historic district. Historical Commission review would be required prior to obtaining zoning or building permits.  If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
+                    document.getElementById("historicInfo").innerHTML = "This parcel is locally historically designated. Historical Commission review would be required prior to obtaining zoning or building permits. If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
                     document.getElementById("historicHeading").innerHTML = "Historic Designation";
                 }
             })
@@ -416,7 +417,7 @@ $(function () {
                 var zoningYear = zoningDate.getFullYear();
                 endZoningDate = zoningMonth + "/" + zoningDay + "/" + zoningYear
 
-                document.getElementById("Disclosure").innerHTML="The Zoning Summary Generator Tool is maintained by the Philadelphia Department of Planning and Development. This tool is designed to help property owners, developers, and neighbors understand what may be allowed on a specific property under the Philadelphia Zoning Code.  The base and overlay zoning districts displayed are current as of " + endZoningDate + ", and the text displayed is current as of 10/8/2019. No information here is legally binding, and nothing stated here represents an official opinion of the City of Philadelphia or any of its departments, boards, or commissions. Please review our <a href='terms.html'>Terms of Use</a> for more information.";
+                document.getElementById("Disclosure").innerHTML="The Zoning Summary Generator Tool is maintained by the Philadelphia Department of Planning and Development. This tool is designed to help property owners, developers, and neighbors understand what may be allowed on a specific property under the Philadelphia Zoning Code.  The base and overlay zoning districts displayed are current as of " + endZoningDate + ", and the text displayed is current as of 10/22/2019. No information here is legally binding, and nothing stated here represents an official opinion of the City of Philadelphia or any of its departments, boards, or commissions. Please review our <a href='terms.html'>Terms of Use</a> for more information.";
                 document.getElementById("DisclosureP2").innerHTML="Did you find an error or have a problem using this page? Please send a description of the problem to <a href='mailto:Planning.Development@phila.gov'>Planning.Development@phila.gov</a> or call 215-683-4686 so that we can help you and improve this tool!";
                 var zoningHere = featureCollection.features[0].properties.LONG_CODE;
                 var zoningShort = featureCollection.features[0].properties.CODE;
