@@ -158,10 +158,6 @@ $(function () {
                             var codedesc = overlays[i][2];
                             tablesetup();
                         }
-                        else {
-                            var codedesc = overlays[i][3];
-                            tablesetup();
-                        }
                     }
                     else if (name == "/CTR Center City Overlay District - Center City Residential District Control Area") {//One version applying to RM1 zoning, one for RSA5, otherwise this overlay doesn't apply
                         if (zoningx == "RM1") {
