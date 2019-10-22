@@ -247,8 +247,8 @@ var overlayRules = {
      "PENDINGBILLURL": "N/A",
      "Version1": "Lots in this area have no maximum number of dwelling units, and the minimum lot area per dwelling unit is 360 square feet. The maximum height is 55 feet, as long as the lot fronts on at least three streets where two of those which intersect have a minimum width of 50 feet.  The portion of any structure above 38 feet in height may occupy up to 60% of the lot area if the lot covers an entire block, and 30% of the lot area for all other lots.  For lots that front on a street of 35 feet or less in width, the first 9 feet of the lot's depth may not exceed 38 feet in height.  ",
      "For1": "CMX-2",
-     "Version2": "The portion of any structure above 38 feet in height may occupy up to 60% of the lot area if the lot covers an entire block, and 30% of the lot area for all other lots.  For lots that front on a street of 35 feet or less in width, the first 9 feet of the lot's depth may not exceed 38 feet in height. ",
-     "For2": "Not CMX-2",
+     "Version2": null,
+     "For2": null,
      "DoNotInclude": null
    },
    "/CTR Center City Overlay District - Center City Residential District Control Area" :
