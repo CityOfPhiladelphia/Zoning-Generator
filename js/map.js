@@ -51,6 +51,7 @@ $(function () {
                 }
             });
             document.getElementById("historicHeading").innerHTML = ""
+            document.getElementById("historicInfo").innerHTML = ""
             var query_historicLocalSites = L.esri.query({
                 url: 'https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/Historic_sites_PhilReg/FeatureServer/0'
             });
@@ -61,7 +62,7 @@ $(function () {
                     document.getElementById("localHistoricSites").innerHTML = "";
                 }
                 else {
-                    document.getElementById("localHistoricSites").innerHTML = "This structure is historically designated. Historical Commission review would be required prior to obtaining zoning or building permits.  If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
+                    document.getElementById("historicInfo").innerHTML = "This parcel is locally historically designated. Historical Commission review would be required prior to obtaining zoning or building permits. If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
                     document.getElementById("historicHeading").innerHTML = "Historic Designation"
                 }
             });
@@ -76,7 +77,7 @@ $(function () {
                     document.getElementById("localHistoricDistricts").innerHTML = "";
                 }
                 else {
-                    document.getElementById("localHistoricDistricts").innerHTML = "This Parcel is within a local historic district. Historical Commission review would be required prior to obtaining zoning or building permits.  If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
+                    document.getElementById("historicInfo").innerHTML = "This parcel is locally historically designated. Historical Commission review would be required prior to obtaining zoning or building permits. If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
                     document.getElementById("historicHeading").innerHTML = "Historic Designation";
                 }
             })
