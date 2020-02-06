@@ -2298,9 +2298,9 @@ var overlayRules = {
      "PENDINGBILL": "N/A",
      "PENDINGBILLURL": "N/A",
      "Version1": "Family child care uses in this area are limited to four or fewer children.",
-     "For1": Not Zoned RSD,
+     "For1": "Not Zoned RSD",
      "Version2": "Family child care uses in this area are limited to four or fewer children. Group child care and child care centers are only permitted in a publicly-owned or operated building.",
-     "For2": Zoned any RSD,
+     "For2": "Zoned any RSD",
      "DoNotInclude": null,
    },
    "Use-Specific Standards - Child Care - Family Child Care - Area 3" :
@@ -2316,9 +2316,9 @@ var overlayRules = {
      "PENDINGBILL": "N/A",
      "PENDINGBILLURL": "N/A",
      "Version1": "Family child care uses in this area are limited to six children.",
-     "For1": Not Zoned RSA-5,
+     "For1": "Not Zoned RSA-5",
      "Version2": "Family child care uses in this area are limited to six children. Group Child Care is prohibited.",
-     "For2": Zoned RSA-5,
+     "For2": "Zoned RSA-5",
      "DoNotInclude": null,
    },
    "Medical Marijuana Dispensary Separation Requirement For Designated Areas - NEEDS FURTHER INVESTIGATION BY EXAMINER" :
@@ -2410,7 +2410,7 @@ var overlayRules = {
      "Version2": null,
      "For2": null,
      "DoNotInclude": null
-   }  
+   },  
     "/CTR Center City Overlay District - Society Hill Area - Northeast" :
    {
      "OBJECTID": 3267,
