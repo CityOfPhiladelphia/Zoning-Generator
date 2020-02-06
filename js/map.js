@@ -331,6 +331,26 @@ $(function () {
                             tablesetup();
                         }
                     }
+                    else if(name =="Use-Specific Standards - Child Care - Family Child Care - Area 1 and Area 2"){//Applies different to RSD and non-RSD
+                        if (zoningx == "RSD1" || zoningx == "RSD2" || zoningx == "RSD3"){
+                            var codedesc = overlays[i][3];
+                            tablesetup();
+                        }
+                        else{
+                            var codedesc = overlays[i][2]
+                            tablesetup()
+                        }
+                    }
+                    else if(name=="Use-Specific Standards - Child Care - Family Child Care - Area 3"){//Applies differently to RSA 5 vs all others
+                        if (zoningx=="RSA5"){
+                            var codedesc = overlays[i][3];
+                            tablesetup()
+                        }
+                        else{
+                            var codedesc = overlays[i][2]
+                            tablesetup()
+                        }
+                    }
                     else {//All other overlays should use the first version to populate text
                         var codedesc = overlays[i][2];
                         tablesetup();
@@ -417,7 +437,7 @@ $(function () {
                 var zoningYear = zoningDate.getFullYear();
                 endZoningDate = zoningMonth + "/" + zoningDay + "/" + zoningYear
 
-                document.getElementById("Disclosure").innerHTML="The Zoning Summary Generator Tool is maintained by the Philadelphia Department of Planning and Development. This tool is designed to help property owners, developers, and neighbors understand what may be allowed on a specific property under the Philadelphia Zoning Code.  The base and overlay zoning districts displayed are current as of " + endZoningDate + ", and the text displayed is current as of 10/22/2019. No information here is legally binding, and nothing stated here represents an official opinion of the City of Philadelphia or any of its departments, boards, or commissions. Please review our <a href='terms.html'>Terms of Use</a> for more information.";
+                document.getElementById("Disclosure").innerHTML="The Zoning Summary Generator Tool is maintained by the Philadelphia Department of Planning and Development. This tool is designed to help property owners, developers, and neighbors understand what may be allowed on a specific property under the Philadelphia Zoning Code.  The base and overlay zoning districts displayed are current as of " + endZoningDate + ", and the text displayed is current as of 2/6/2020. No information here is legally binding, and nothing stated here represents an official opinion of the City of Philadelphia or any of its departments, boards, or commissions. Please review our <a href='terms.html'>Terms of Use</a> for more information.";
                 document.getElementById("DisclosureP2").innerHTML="Did you find an error or have a problem using this page? Please send a description of the problem to <a href='mailto:Planning.Development@phila.gov'>Planning.Development@phila.gov</a> or call 215-683-4686 so that we can help you and improve this tool!";
                 var zoningHere = featureCollection.features[0].properties.LONG_CODE;
                 var zoningShort = featureCollection.features[0].properties.CODE;
@@ -471,7 +491,7 @@ $(function () {
                 document.getElementById("baseZoningTitle").innerHTML = "BASE ZONING";
                 var zoningCode = mydata[zoningShort].CODE;
                 var codeLink = mydata[zoningShort].Code_link;
-                document.getElementById("useRegs").innerHTML = "Use Regulations | " + zoningCode + " " + "<a href="+ codeLink + " target='_blank'><sup><i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></sup></i></a>";
+                document.getElementById("useRegs").innerHTML = "Use Regulations" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ codeLink + " target='_blank'>" + zoningCode + "<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>)</span></p>";
                 var byRightsStruct = mydata[zoningShort].BY_RIGHT_STRUCTURES;
                 
                 if (byRightsStruct !== null) {
@@ -554,7 +574,7 @@ $(function () {
                 var dimStands = mydata[zoningShort].DimCODE;
                 var dimLink = mydata[zoningShort].DimCODE_Link
                 if (dimStands !== null) {
-                    document.getElementById("dimStandsLabel").innerHTML = "Dimensional Standards | " + dimStands + " " + "<a href="+ dimLink+ " target='_blank'><sup><i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></sup></i></a>";
+                    document.getElementById("dimStandsLabel").innerHTML = "Dimensional Standards" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ dimLink + " target='_blank'>" + dimStands + "<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>)</p>";
                 }
                 else {
                     document.getElementById("dimStandsLabel").innerHTML = "";
@@ -713,7 +733,7 @@ $(function () {
                     var parkCode = mydata[zoningx].REQUIRED_PARKING_CODE;
                     var recParkLink = mydata[zoningx].REQUIRED_PARKING_CODE_Link;
                     if (reqPark !== null) {
-                        var parkheader = "Required Parking <br />" + parkCode + " " + "<a href="+ recParkLink + " target='_blank'><sup><i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ><sup></i></a>";
+                        var parkheader = "Required Parking <br />" + parkCode + " " + "<a href="+ recParkLink + " target='_blank'><i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>";
                         var parkdetails = reqPark;
                         parktablesetup();
                         x++;
@@ -722,7 +742,7 @@ $(function () {
                     var parkStandardsCode = mydata[zoningx].PARKING_STANDARDS_CODE;
                     var parkStandardsLink = mydata[zoningx].PARKING_STANDARDS_CODE_Link;
                     if (parkStandards !== null) {
-                        var parkheader = "Parking Standards <br /> " + parkStandardsCode + " " + "<a href="+ parkStandardsLink + " target='_blank'><sup><i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></sup></i></a>";
+                        var parkheader = "Parking Standards <br /> " + parkStandardsCode + " " + "<a href="+ parkStandardsLink + " target='_blank'><i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>";
                         var parkdetails = parkStandards;
                         parktablesetup();
                         x++;
@@ -740,7 +760,7 @@ $(function () {
                     var loadingCode = mydata[zoningx].REQUIRED_LOADING_CODE;
                     var loadingLink = mydata[zoningx].REQUIRED_LOADING_CODE_LINK;
                     if (loading !== null) {
-                        var parkheader = "Required Off-Street Loading <br />" + loadingCode + " " + "<a href="+ loadingLink + " target='_blank'><sup><i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></sup></i></a>";
+                        var parkheader = "Required Off-Street Loading <br />" + loadingCode + " " + "<a href="+ loadingLink + " target='_blank'><i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>";
                         var parkdetails = loading;
                         parktablesetup();
                         x++;
@@ -750,7 +770,7 @@ $(function () {
                 var code2 = mydata[zoningShort].SPECIAL_ZONING_CODE;
                 var specCode2Link = mydata[zoningShort].SPECIAL_ZONING_CODE_Link;
                 if (code2 !== null) {
-                    document.getElementById("parkCodeLabel").innerHTML = "Parking and Loading | " + code2 + " " + "<a href="+ specCode2Link + " target='_blank'><sup><i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></sup></i></a>";
+                    document.getElementById("parkCodeLabel").innerHTML = "Parking and Loading" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ specCode2Link + " target='_blank'>" + code2 + "<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>)</p>";
                 }
                 else {
                     document.getElementById("parkCodeLabel").innerHTML = "Parking and Loading";
@@ -762,7 +782,7 @@ $(function () {
                 var signstands = mydata[zoningShort].SIGN_CODE;
                 var signCodeLink = "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-900signs?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-904"
                 if (signstands !== null){
-                    document.getElementById("signLabel").innerHTML = "Sign Regulations | " + signstands + " " + "<a href="+ signCodeLink + " target='_blank'><sup><i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></sup></i></a>";
+                    document.getElementById("signLabel").innerHTML = "Sign Regulations" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ signCodeLink + " target='_blank'>" + signstands + "<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>)</p>";
                 }
                 else {
                     document.getElementById("signLabel").innerHTML = "Sign Regulations";
@@ -846,7 +866,7 @@ $(function () {
                 var fenceRules = mydata[zoningShort].FENCE_RULES;
                 var fenceLink = "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-700developmentstandards?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-706";
                 if (fenceRules !== null) {
-                    document.getElementById("fencelabel").innerHTML = "Fences | 14-706 "+ "<a href="+ fenceLink + " target='_blank'><sup><i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></sup></i></a>";
+                    document.getElementById("fencelabel").innerHTML = "Fences" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ fenceLink + " target='_blank'>14-706<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>)</p>";
                     document.getElementById("fencedata").innerHTML = fenceRules;
                 }
                 else {
