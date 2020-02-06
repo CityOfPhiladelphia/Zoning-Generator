@@ -1145,7 +1145,7 @@ var overlayRules = {
      "PENDING": "No",
      "PENDINGBILL": "N/A",
      "PENDINGBILLURL": "N/A",
-     "Version1": "Property is subject to a number of requirements pertaining to curb cuts, setbacks, planted screening areas, and ground floor usage aimed at preserving the feel and function of the neighborhood.  Please see Philadlephia Code 14-503(2) for details.",
+     "Version1": "Property is subject to a number of requirements pertaining to curb cuts, setbacks, planted screening areas, and ground floor usage.  Please see Philadlephia Code 14-503(2) for details.",
      "For1": "Zoned Commercial",
      "Version2": null,
      "For2": null,
@@ -1343,7 +1343,7 @@ var overlayRules = {
      "PENDING": "No",
      "PENDINGBILL": "N/A",
      "PENDINGBILLURL": "N/A",
-     "Version1": "This overlay applies only to lots with frontage on Ridge Ave.  Net leasable area for commercial purposes in new buildings is limited to 8,000 sq. ft. Buildings may not exceed 45 feet in height. Several rules (<a href='http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-500overlayzoningdistricts?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-503(6)' target='_blank'>14-503(6)(c) and (d)</a>) govern the structure, use, and appearance of buildings in this area, and the Planning Commission must review facade plans for compliance before building permits are issued. Illumninated, digital, freestanding, and non-accessory signs are prohibited. Wireless towers, moving and storage facilities, personal care homes, non-accessory parking, and drive-throughs are prohibited.  Offices, business services, group day care, research & development, medical and dental offices, and take-out restaurants require a special exception. (14-503(6)(f))",
+     "Version1": "This overlay applies only to lots with frontage on Ridge Ave.  Net leasable area for commercial purposes in new buildings is limited to 8,000 sq. ft. Buildings may not exceed 45 feet in height. Several rules (<a href='http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-500overlayzoningdistricts?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-503(6)' target='_blank'>14-503(6)(c) and (d)</a>) govern the structure, use, and appearance of buildings in this area, and the Planning Commission must review facade plans for compliance before building permits are issued. Illumninated, digital, freestanding, and non-accessory signs are prohibited. Wireless towers, moving and storage facilities, personal care homes, non-accessory parking, and drive-throughs are prohibited.  Offices, business services, group child care, research & development, medical and dental offices, and take-out restaurants require a special exception. (14-503(6)(f))",
      "For1": "CMX-2, 2.5, 3",
      "Version2": null,
      "For2": null,
@@ -2288,7 +2288,7 @@ var overlayRules = {
    "Use-Specific Standards - Child Care - Family Child Care - Area 1 and Area 2" :
    {
      "OBJECTID": 20482,
-     "OVERLAY_NAME": "Use-Specific Standards - [Day] CHILD Care - Family [Day] CHILD Care - Area 1 and Area 2",
+     "OVERLAY_NAME": "Use-Specific Standards - Child Care - Family Child Care - Area 1 and Area 2",
      "OVERLAY_SYMBOL": "[N/A]",
      "TYPE": "Supplemental Control",
      "CODE_SECTION": "14-603(5)",
@@ -2297,16 +2297,16 @@ var overlayRules = {
      "PENDING": "No",
      "PENDINGBILL": "N/A",
      "PENDINGBILLURL": "N/A",
-     "Version1": null,
-     "For1": null,
-     "Version2": null,
-     "For2": null,
-     "DoNotInclude": "x"
+     "Version1": "Family child care uses in this area are limited to four or fewer children.",
+     "For1": Not Zoned RSD,
+     "Version2": "Family child care uses in this area are limited to four or fewer children. Group child care and child care centers are only permitted in a publicly-owned or operated building.",
+     "For2": Zoned any RSD,
+     "DoNotInclude": null,
    },
    "Use-Specific Standards - Child Care - Family Child Care - Area 3" :
    {
      "OBJECTID": 20510,
-     "OVERLAY_NAME": "Use-Specific Standards - [Day] CHILD Care - Family [Day] CHILD Care - Area 3",
+     "OVERLAY_NAME": "Use-Specific Standards - Child Care - Family Child Care - Area 3",
      "OVERLAY_SYMBOL": "[N/A]",
      "TYPE": "Supplemental Control",
      "CODE_SECTION": "14-603(5)",
@@ -2315,11 +2315,11 @@ var overlayRules = {
      "PENDING": "No",
      "PENDINGBILL": "N/A",
      "PENDINGBILLURL": "N/A",
-     "Version1": null,
-     "For1": null,
-     "Version2": null,
-     "For2": null,
-     "DoNotInclude": "x"
+     "Version1": "Family child care uses in this area are limited to six children.",
+     "For1": Not Zoned RSA-5,
+     "Version2": "Family child care uses in this area are limited to six children. Group Child Care is prohibited.",
+     "For2": Zoned RSA-5,
+     "DoNotInclude": null,
    },
    "Medical Marijuana Dispensary Separation Requirement For Designated Areas - NEEDS FURTHER INVESTIGATION BY EXAMINER" :
    {
@@ -2410,5 +2410,23 @@ var overlayRules = {
      "Version2": null,
      "For2": null,
      "DoNotInclude": null
+   }  
+    "/CTR Center City Overlay District - Society Hill Area - Northeast" :
+   {
+     "OBJECTID": 3267,
+     "OVERLAY_NAME": "/CTR Center City Overlay District - Society Hill Area - Northeast",
+     "OVERLAY_SYMBOL": "/CTR",
+     "TYPE": "Overlay District",
+     "CODE_SECTION": "14-502-1(2)(b)(.32)(.a)",
+     "CODE_SECTION_LINK": "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-500overlayzoningdistricts?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-502(2)",
+     "SUNSET_DATE": null,
+     "PENDING": "Yes",
+     "PENDINGBILL": "190830",
+     "PENDINGBILLURL": "https://phila.legistar.com/LegislationDetail.aspx?ID=4205010&GUID=36732F95-ED9E-4034-834A-C46EAA4181B2&Options=ID|Text|&Search=190830",
+     "Version1": null,
+     "For1": null,
+     "Version2": null,
+     "For2": null,
+     "DoNotInclude": "x"
    }      
   }

@@ -331,6 +331,26 @@ $(function () {
                             tablesetup();
                         }
                     }
+                    else if(name =="Use-Specific Standards - Child Care - Family Child Care - Area 1 and Area 2"){//Applies different to RSD and non-RSD
+                        if (zoningx == "RSD1" || zoningx == "RSD2" || zoningx == "RSD3"){
+                            var codedesc = overlays[i][3];
+                            tablesetup();
+                        }
+                        else{
+                            var codedesc = overlays[i][2]
+                            tablesetup()
+                        }
+                    }
+                    else if(name=="Use-Specific Standards - Child Care - Family Child Care - Area 3"){//Applies differently to RSA 5 vs all others
+                        if (zoningx=="RSA5"){
+                            var codedesc = overlays[i][3];
+                            tablesetup()
+                        }
+                        else{
+                            var codedesc = overlays[i][2]
+                            tablesetup()
+                        }
+                    }
                     else {//All other overlays should use the first version to populate text
                         var codedesc = overlays[i][2];
                         tablesetup();
@@ -417,7 +437,7 @@ $(function () {
                 var zoningYear = zoningDate.getFullYear();
                 endZoningDate = zoningMonth + "/" + zoningDay + "/" + zoningYear
 
-                document.getElementById("Disclosure").innerHTML="The Zoning Summary Generator Tool is maintained by the Philadelphia Department of Planning and Development. This tool is designed to help property owners, developers, and neighbors understand what may be allowed on a specific property under the Philadelphia Zoning Code.  The base and overlay zoning districts displayed are current as of " + endZoningDate + ", and the text displayed is current as of 10/22/2019. No information here is legally binding, and nothing stated here represents an official opinion of the City of Philadelphia or any of its departments, boards, or commissions. Please review our <a href='terms.html'>Terms of Use</a> for more information.";
+                document.getElementById("Disclosure").innerHTML="The Zoning Summary Generator Tool is maintained by the Philadelphia Department of Planning and Development. This tool is designed to help property owners, developers, and neighbors understand what may be allowed on a specific property under the Philadelphia Zoning Code.  The base and overlay zoning districts displayed are current as of " + endZoningDate + ", and the text displayed is current as of 2/6/2020. No information here is legally binding, and nothing stated here represents an official opinion of the City of Philadelphia or any of its departments, boards, or commissions. Please review our <a href='terms.html'>Terms of Use</a> for more information.";
                 document.getElementById("DisclosureP2").innerHTML="Did you find an error or have a problem using this page? Please send a description of the problem to <a href='mailto:Planning.Development@phila.gov'>Planning.Development@phila.gov</a> or call 215-683-4686 so that we can help you and improve this tool!";
                 var zoningHere = featureCollection.features[0].properties.LONG_CODE;
                 var zoningShort = featureCollection.features[0].properties.CODE;
