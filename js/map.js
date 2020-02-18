@@ -914,7 +914,7 @@ $(function () {
         $("#PrintBtn").show();
         const gatekeeperKey = "ad1c7f7c6895cd11c1bec0b53f1e1bab";
         const addressInput = document.getElementById("addr");
-        const requestUrl = `http://api.phila.gov/ais/v1/search/${addressInput.value}?gatekeeperKey=${gatekeeperKey}`;
+        const requestUrl = `https://api.phila.gov/ais/v1/search/${addressInput.value}?gatekeeperKey=${gatekeeperKey}`;
         $.get(requestUrl, function (result) {
             if (result.features.length > 0) {
                 const coordinates = new L.LatLng(result.features[0].geometry.coordinates[1], result.features[0].geometry.coordinates[0]);
