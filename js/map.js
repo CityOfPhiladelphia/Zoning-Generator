@@ -593,7 +593,7 @@ $(function () {
                         titleCell.style.fontWeight = "bold";
                         dataCell.style.width = '30%';
                         dataCell.style.fontSize = '14px';
-                        titleCell.innerHTML = dimheader;
+                        titleCell.outerHTML = "<th width='10%'>"+dimheader+"</th>";
                         dataCell.innerHTML = dimdetails;
                         x++
                     }
@@ -712,7 +712,7 @@ $(function () {
                 }
                 
                 createDimensionTable(zoningShort);
-                
+        
                 function createParkingTable(zoningx) {
                     var parktable = document.getElementById("parkTable");
                     parktable.innerHTML = "";
@@ -726,7 +726,7 @@ $(function () {
                         pcodeCell.style.fontWeight = "bold";
                         pnameCell.style.width = '30%';
                         pnameCell.style.fontSize = '14px';
-                        pcodeCell.innerHTML = parkheader;
+                        pcodeCell.outerHTML = "<th width='10%'>"+parkheader+"</th>";
                         pnameCell.innerHTML = parkdetails;
                     }
                     var reqPark = mydata[zoningx].REQUIRED_PARKING;
@@ -801,7 +801,7 @@ $(function () {
                         scodeCell.style.fontWeight = "bold";
                         snameCell.style.width = '30%';
                         snameCell.style.fontSize = '14px';
-                        scodeCell.innerHTML = signheader;
+                        scodeCell.outerHTML = "<th width='10%'>"+signheader+"</th>";
                         snameCell.innerHTML = signdetails;
                     }
                     
