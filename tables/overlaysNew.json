@@ -632,7 +632,7 @@ var overlayRules = {
    "/CTR Center City Overlay District - Market Street East Retail Area - North" :
    {
      "OBJECTID": 20519,
-     "OVERLAY_NAME": "/CTR Center City Overlay District - Market Street East Retail Area",
+     "OVERLAY_NAME": "/CTR Center City Overlay District - Market Street East Retail Area - North",
      "OVERLAY_SYMBOL": "/CTR",
      "TYPE": "Overlay District",
      "CODE_SECTION": "14-502-1",
@@ -650,7 +650,7 @@ var overlayRules = {
     "/CTR Center City Overlay District - Market Street East Retail Area - South" :
    {
      "OBJECTID": 20519,
-     "OVERLAY_NAME": "/CTR Center City Overlay District - Market Street East Retail Area",
+     "OVERLAY_NAME": "/CTR Center City Overlay District - Market Street East Retail Area - South",
      "OVERLAY_SYMBOL": "/CTR",
      "TYPE": "Overlay District",
      "CODE_SECTION": "14-502-1",
@@ -1622,7 +1622,7 @@ var overlayRules = {
    "/TOD Transit-Oriented Development Overlay District - Erie-Torresdale Station (Market-Frankford Line)" :
    {
      "OBJECTID": 20489,
-     "OVERLAY_NAME": "/TOD Transiet-Oriented Development Overly District - Erie-Torresdale Station (Market-Frankford Line)",
+     "OVERLAY_NAME": "/TOD Transit-Oriented Development Overlay District - Erie-Torresdale Station (Market-Frankford Line)",
      "OVERLAY_SYMBOL": "/TOD",
      "TYPE": "Overlay District",
      "CODE_SECTION": "14-513(3)(a)(.2)",
@@ -1676,7 +1676,7 @@ var overlayRules = {
     "/TOD Transit-Oriented Development Overlay District - Spring Garden Station (Market-Frankford Line)" :
    {
      "OBJECTID": 20487,
-     "OVERLAY_NAME": "/TOD Transit-Oriented Development Overlay District - York-Dauphin Station (Market-Frankford Line)",
+     "OVERLAY_NAME": "/TOD Transit-Oriented Development Overlay District - Spring Garden Station (Market-Frankford Line)",
      "OVERLAY_SYMBOL": "/TOD",
      "TYPE": "Overlay District",
      "CODE_SECTION": "14-513(3)(a)(.4)",
@@ -2324,7 +2324,7 @@ var overlayRules = {
    "Medical Marijuana Dispensary Separation Requirement For Designated Areas - NEEDS FURTHER INVESTIGATION BY EXAMINER" :
    {
      "OBJECTID": 24345,
-     "OVERLAY_NAME": "Medical Marijuana Dispensary Separation Requirement For Designated Areas",
+     "OVERLAY_NAME": "Medical Marijuana Dispensary Separation Requirement For Designated Areas - NEEDS FURTHER INVESTIGATION BY EXAMINER",
      "OVERLAY_SYMBOL": "[N/A]",
      "TYPE": "Supplemental Control",
      "CODE_SECTION": "14-603(20)(a)(.1)(.j)",
@@ -2411,7 +2411,7 @@ var overlayRules = {
      "For2": null,
      "DoNotInclude": null
    },  
-    "/CTR Center City Overlay District - Society Hill Area - Northeast" :
+   "/CTR Center City Overlay District - Society Hill Area - Northeast" :
    {
      "OBJECTID": 3267,
      "OVERLAY_NAME": "/CTR Center City Overlay District - Society Hill Area - Northeast",
@@ -2423,6 +2423,24 @@ var overlayRules = {
      "PENDING": "Yes",
      "PENDINGBILL": "190830",
      "PENDINGBILLURL": "https://phila.legistar.com/LegislationDetail.aspx?ID=4205010&GUID=36732F95-ED9E-4034-834A-C46EAA4181B2&Options=ID|Text|&Search=190830",
+     "Version1": null,
+     "For1": null,
+     "Version2": null,
+     "For2": null,
+     "DoNotInclude": "x"
+   },
+   "Center City Overlay District - Old City Residential Supplemental Use Controls" :
+   {
+     "OBJECTID": 3263,
+     "OVERLAY_NAME": "Center City Overlay District - Old City Residential Supplemental Use Controls",
+     "OVERLAY_SYMBOL": "[N/A]",
+     "TYPE": "Supplemental Control",
+     "CODE_SECTION": "14-502-2",
+     "CODE_SECTION_LINK": "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-500overlayzoningdistricts?f=templates$fn=altmain-nf.htm$q=[field%20folio-destination-name:%27Table%2014-502-2%27]$x=Advanced#JD_Table14-502-2",
+     "SUNSET_DATE": null,
+     "PENDING": "No",
+     "PENDINGBILL": "N/A",
+     "PENDINGBILLURL": "N/A",
      "Version1": null,
      "For1": null,
      "Version2": null,
