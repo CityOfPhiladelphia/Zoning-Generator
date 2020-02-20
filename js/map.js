@@ -733,7 +733,7 @@ $(function () {
                     var parkCode = mydata[zoningx].REQUIRED_PARKING_CODE;
                     var recParkLink = mydata[zoningx].REQUIRED_PARKING_CODE_Link;
                     if (reqPark !== null) {
-                        var parkheader = "Required Parking <br />" + parkCode + " " + "<a href="+ recParkLink + " target='_blank'><i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>";
+                        var parkheader = "Required Parking <br />" + " " + "<a href="+ recParkLink + " target='_blank'>" + parkCode + " <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>";
                         var parkdetails = reqPark;
                         parktablesetup();
                         x++;
@@ -742,7 +742,7 @@ $(function () {
                     var parkStandardsCode = mydata[zoningx].PARKING_STANDARDS_CODE;
                     var parkStandardsLink = mydata[zoningx].PARKING_STANDARDS_CODE_Link;
                     if (parkStandards !== null) {
-                        var parkheader = "Parking Standards <br /> " + parkStandardsCode + " " + "<a href="+ parkStandardsLink + " target='_blank'><i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>";
+                        var parkheader = "Parking Standards <br /> " + " " + "<a href="+ parkStandardsLink + " target='_blank'>" + parkStandardsCode + " <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>";
                         var parkdetails = parkStandards;
                         parktablesetup();
                         x++;
@@ -760,7 +760,7 @@ $(function () {
                     var loadingCode = mydata[zoningx].REQUIRED_LOADING_CODE;
                     var loadingLink = mydata[zoningx].REQUIRED_LOADING_CODE_LINK;
                     if (loading !== null) {
-                        var parkheader = "Required Off-Street Loading <br />" + loadingCode + " " + "<a href="+ loadingLink + " target='_blank'><i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>";
+                        var parkheader = "Required Off-Street Loading <br />" + " " + "<a href="+ loadingLink + " target='_blank'>" + loadingCode + " <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>";
                         var parkdetails = loading;
                         parktablesetup();
                         x++;

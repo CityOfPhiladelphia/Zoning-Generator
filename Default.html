@@ -92,7 +92,7 @@
           <nav>
             <ul>
               <li>
-                <a href="https://www.phila.gov/media/20190212105254/FINAL-Permit-Checklist_January2019.1-1.pdf" target='_blank'><b>Development Checklist</b></a>
+                <a href="https://www.phila.gov/media/20190212105254/FINAL-Permit-Checklist_January2019.1-1.pdf" target='_blank'><b>Development Checklist (PDF)</b></a>
               </li>
               <li>
                 <a href="https://www.phila.gov/departments/department-of-planning-and-development/development-services/" target='_blank'><b>Development Services</b></a>
@@ -142,10 +142,13 @@
   <div id="map">
   </div>
   <div id="search">
-    <input type="text" name="addr" placeholder="Search the map" value="" id="addr" size="58" onkeydown="if (event.keyCode == 13)
+    <form>
+      <label for="Search the map"></label>
+    <input type="text" name="addr" label="Search the map" placeholder="Search the map" value="" id="addr" size="58" onkeydown="if (event.keyCode == 13)
     {document.getElementById('btnSearch').click(); return false;}" />
-    <button type="button" id="btnSearch"><i class = 'fas fa-search fa-2x' span style='font-size: 18px'; ></i></button>
+    <button type="button" id="btnSearch"><i class = 'fas fa-search fa-2x' span style='font-size: 18px' alt="Search" ></i></button>
     <div id="results"></div>
+    </form>
   </div>
 <div id="PrintBtn">
   <button type="button" id="btnPrint" onclick="window.print();return false;">Print</button>
