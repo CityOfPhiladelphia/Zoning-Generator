@@ -141,10 +141,12 @@
   </div>
   <div id="map">
   </div>
-  <div id="search" aria-labelledby="Search the map">
-    <input type="text"  name="addr" placeholder="Search the map" alt="Search the map" value="" id="addr" size="58" onkeydown="if (event.keyCode == 13)
+  <div id="search">
+    <input type="text" aria-labelledby="Search the map" name="addr" placeholder="Search the map" alt="Search the map" value="" id="addr" size="58" onkeydown="if (event.keyCode == 13)
     {document.getElementById('btnSearch').click(); return false;}" />
-    <button type="button" id="btnSearch" ><i class = 'fas fa-search fa-2x' span style='font-size: 18px' alt="Search" ></i></button>
+    <button type="button" id="btnSearch" aria-label="Search" title="Search">
+      <i class = 'fas fa-search fa-2x' span style='font-size: 18px'></i>
+    </button>
     <div id="results"></div>
   </div>
 <div id="PrintBtn">
