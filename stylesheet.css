@@ -350,3 +350,11 @@ a.leaflet-control-zoomhome-out {
 	font-size: 22px;
 	padding: 3px
 }
+table th i {
+	color: white
+}
+
+table th a:any-link {
+	color: white;
+	text-decoration: underline;
+}
