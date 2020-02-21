@@ -103,7 +103,7 @@ $(function () {
             for (var i in overlays) {
                 var link = overlays[i][0];
                 var name = i;
-                var codenum = "<a href=" + link + " target='_blank'><b>" + overlays[i][1]+ "</b>" + "<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>";
+                var codenum = "<a href=" + link + " target='_blank'><b>" + overlays[i][1]+ "</b>" + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>";
                 ///Function below adds the the overlay to the overlay table based on the variables determined in the if/else statements for each overlay that has different version.
                 if (overlays[i][4] == null) {
                     function tablesetup() {
@@ -449,7 +449,7 @@ $(function () {
                 }
                 else {
                     var pendingZoning = document.getElementById("pendingZoningAlert");
-                    pendingZoning.innerHTML = "<div class='callout'><p><b>Attention: Pending Base Zoning Ordinance</b></p><p>A bill under consideration by City Council would affect the base zoning of this parcel.  Any provision of the bill under consideration that is more restrictive than the current law will be applied if development occurs while the ordinance remains pending. See <a href=" + zoningPendingLink + " target='_blank'>" + "Bill " + zoningPendingBill + "<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a> or call Development Services at 215-683-4686 for more information.</p></div>";
+                    pendingZoning.innerHTML = "<div class='callout'><p><b>Attention: Pending Base Zoning Ordinance</b></p><p>A bill under consideration by City Council would affect the base zoning of this parcel.  Any provision of the bill under consideration that is more restrictive than the current law will be applied if development occurs while the ordinance remains pending. See <a href=" + zoningPendingLink + " target='_blank'>" + "Bill " + zoningPendingBill + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a> or call Development Services at 215-683-4686 for more information.</p></div>";
                 } 
                 var query_parcel = L.esri.query({
                     url: 'https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/PWD_PARCELS/FeatureServer/0'
@@ -491,7 +491,7 @@ $(function () {
                 document.getElementById("baseZoningTitle").innerHTML = "BASE ZONING";
                 var zoningCode = mydata[zoningShort].CODE;
                 var codeLink = mydata[zoningShort].Code_link;
-                document.getElementById("useRegs").innerHTML = "Use Regulations" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ codeLink + " target='_blank'>" + zoningCode + "<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>)</span></p>";
+                document.getElementById("useRegs").innerHTML = "Use Regulations" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ codeLink + " target='_blank'>" + zoningCode + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>)</span></p>";
                 var byRightsStruct = mydata[zoningShort].BY_RIGHT_STRUCTURES;
                 
                 if (byRightsStruct !== null) {
@@ -524,7 +524,7 @@ $(function () {
                     document.getElementById("theExceptionsTitle").innerHTML = "";
                     document.getElementById("theExceptions").innerHTML = "";
                 }
-                document.getElementById("useStarredNote").innerHTML = "* Use-specific design standards <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-603" + " target='_blank'>" +"(14-603)</a> may apply.";
+                document.getElementById("useStarredNote").innerHTML = "* Use-specific design standards <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-603" + " target='_blank'>" +"(14-603) <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a> may apply.";
                 
                 var multiusenote = mydata[zoningShort].MULTIUSE_NOTE;
                 if (multiusenote !== null) {
@@ -547,7 +547,7 @@ $(function () {
                     document.getElementById("acctStructures").innerHTML = "";
                 }
                 if (accStructsCond !== null) {
-                    document.getElementById("accStructsConds").innerHTML = ". Conditions apply or exceptions are required for " + accStructsCond + "; see <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-604 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>.";
+                    document.getElementById("accStructsConds").innerHTML = ". Conditions apply or exceptions are required for " + accStructsCond + "; see <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-604 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.";
                 }
                 else {
                     document.getElementById("accStructsConds").innerHTML = "";
@@ -557,7 +557,7 @@ $(function () {
                 var accUseCon = mydata[zoningShort].ACC_USE_COND;
                 if (permAccessUse !== null) {
                     document.getElementById("permAccessUseheader").innerHTML = "Permitted Accessory Uses: ";
-                    document.getElementById("permAccessUseText").innerHTML = permAccessUse + " are allowed as long as they comply with <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-604 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a> and any other applicable standards. ";
+                    document.getElementById("permAccessUseText").innerHTML = permAccessUse + " are allowed as long as they comply with <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-604 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a> and any other applicable standards. ";
                 }
                 else {
                     document.getElementById("permAccessUseheader").innerHTML = "";
@@ -565,7 +565,7 @@ $(function () {
                 }
                 
                 if (accUseCon !== null) {
-                    document.getElementById("permAccessUseCond").innerHTML = "Conditions apply or exceptions are required for " + accUseCon + "; see <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-604 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>.";
+                    document.getElementById("permAccessUseCond").innerHTML = "Conditions apply or exceptions are required for " + accUseCon + "; see <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-604 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.";
                 }
                 else {
                     document.getElementById("permAccessUseCond").innerHTML = "";
@@ -574,7 +574,7 @@ $(function () {
                 var dimStands = mydata[zoningShort].DimCODE;
                 var dimLink = mydata[zoningShort].DimCODE_Link
                 if (dimStands !== null) {
-                    document.getElementById("dimStandsLabel").innerHTML = "Dimensional Standards" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ dimLink + " target='_blank'>" + dimStands + "<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>)</p>";
+                    document.getElementById("dimStandsLabel").innerHTML = "Dimensional Standards" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ dimLink + " target='_blank'>" + dimStands + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>)</p>";
                 }
                 else {
                     document.getElementById("dimStandsLabel").innerHTML = "";
@@ -770,7 +770,7 @@ $(function () {
                 var code2 = mydata[zoningShort].SPECIAL_ZONING_CODE;
                 var specCode2Link = mydata[zoningShort].SPECIAL_ZONING_CODE_Link;
                 if (code2 !== null) {
-                    document.getElementById("parkCodeLabel").innerHTML = "Parking and Loading" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ specCode2Link + " target='_blank'>" + code2 + "<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>)</p>";
+                    document.getElementById("parkCodeLabel").innerHTML = "Parking and Loading" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ specCode2Link + " target='_blank'>" + code2 + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>)</p>";
                 }
                 else {
                     document.getElementById("parkCodeLabel").innerHTML = "Parking and Loading";
@@ -782,7 +782,7 @@ $(function () {
                 var signstands = mydata[zoningShort].SIGN_CODE;
                 var signCodeLink = "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-900signs?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-904"
                 if (signstands !== null){
-                    document.getElementById("signLabel").innerHTML = "Sign Regulations" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ signCodeLink + " target='_blank'>" + signstands + "<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>)</p>";
+                    document.getElementById("signLabel").innerHTML = "Sign Regulations" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ signCodeLink + " target='_blank'>" + signstands + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>)</p>";
                 }
                 else {
                     document.getElementById("signLabel").innerHTML = "Sign Regulations";
@@ -874,7 +874,7 @@ $(function () {
                     document.getElementById("fencedata").innerHTML = "";
                 }
                 document.getElementById("otherConcerns").innerHTML = "Other Base Zoning Concerns";
-                document.getElementById("otherConcernDisclaimer").innerHTML = "The zoning code (Title 14 of the Philadelphia Code) contains other provisions and restrictions, including situation-specific sections governing signs <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-900signs?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_Chapter14-900 " + " target='_blank'>" + "(14-900)" + "<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>" + ", outdoor lighting <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-700developmentstandards?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-707" + " target='_blank'>" + "(14-707) <i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>, and subdivisions of land <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-700developmentstandards?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-708" + " target='_blank'>" + "(14-708)<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>. <br /><br />Other regulations that affect building dimensions, locations, and uses may be found in other sections of the Philadelphia Code and are not covered by this summary.";
+                document.getElementById("otherConcernDisclaimer").innerHTML = "The zoning code (Title 14 of the Philadelphia Code) contains other provisions and restrictions, including situation-specific sections governing signs <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-900signs?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_Chapter14-900 " + " target='_blank'>" + "(14-900)" + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>" + ", outdoor lighting <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-700developmentstandards?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-707" + " target='_blank'>" + "(14-707) <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>, and subdivisions of land <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-700developmentstandards?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-708" + " target='_blank'>" + "(14-708)<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>. <br /><br />Other regulations that affect building dimensions, locations, and uses may be found in other sections of the Philadelphia Code and are not covered by this summary.";
             }
         });
     }
