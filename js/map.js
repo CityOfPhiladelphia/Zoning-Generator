@@ -437,7 +437,7 @@ $(function () {
                 var zoningYear = zoningDate.getFullYear();
                 endZoningDate = zoningMonth + "/" + zoningDay + "/" + zoningYear
 
-                document.getElementById("Disclosure").innerHTML="The Zoning Summary Generator Tool is maintained by the Philadelphia Department of Planning and Development. This tool is designed to help property owners, developers, and neighbors understand what may be allowed on a specific property under the Philadelphia Zoning Code.  The base and overlay zoning districts displayed are current as of " + endZoningDate + ", and the text displayed is current as of 2/14/2020. No information here is legally binding, and nothing stated here represents an official opinion of the City of Philadelphia or any of its departments, boards, or commissions. Please review our <a href='terms.html'>Terms of Use</a> for more information.";
+                document.getElementById("Disclosure").innerHTML="The Zoning Summary Generator Tool is maintained by the Philadelphia Department of Planning and Development. This tool is designed to help property owners, developers, and neighbors understand what may be allowed on a specific property under the Philadelphia Zoning Code.  The base and overlay zoning districts displayed are current as of " + endZoningDate + ", and the text displayed is current as of 2/21/2020. No information here is legally binding, and nothing stated here represents an official opinion of the City of Philadelphia or any of its departments, boards, or commissions. Please review our <a href='terms.html'>Terms of Use</a> for more information.";
                 document.getElementById("DisclosureP2").innerHTML="Did you find an error or have a problem using this page? Please send a description of the problem to <a href='mailto:Planning.Development@phila.gov'>Planning.Development@phila.gov</a> or call 215-683-4686 so that we can help you and improve this tool!";
                 var zoningHere = featureCollection.features[0].properties.LONG_CODE;
                 var zoningShort = featureCollection.features[0].properties.CODE;
@@ -866,7 +866,7 @@ $(function () {
                 var fenceRules = mydata[zoningShort].FENCE_RULES;
                 var fenceLink = "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-700developmentstandards?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-706";
                 if (fenceRules !== null) {
-                    document.getElementById("fencelabel").innerHTML = "Fences" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ fenceLink + " target='_blank'>14-706<i class = 'fas fa-external-link-alt' span style='font-size: 14px'; ></i></a>)</p>";
+                    document.getElementById("fencelabel").innerHTML = "Fences" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ fenceLink + " target='_blank'>14-706<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>)</p>";
                     document.getElementById("fencedata").innerHTML = fenceRules;
                 }
                 else {
