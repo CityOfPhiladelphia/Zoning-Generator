@@ -59,7 +59,7 @@ $(function () {
             query_historicLocalSites.outfields = ["LOC"];
             query_historicLocalSites.run(function (error, featureCollection, response){
                 if (featureCollection.features.length == 0){
-                    document.getElementById("localHistoricSites").innerHTML = "";
+                    console.log(featureCollection.features.length)
                 }
                 else {
                     document.getElementById("historicInfo").innerHTML = "This parcel is locally historically designated. Historical Commission review would be required prior to obtaining zoning or building permits. If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
@@ -74,7 +74,7 @@ $(function () {
             query_historicLocalDistricts.run(function (error, featureCollection, response){
                 var localdistrict = featureCollection.features.length;
                 if (featureCollection.features.length == 0){
-                    document.getElementById("localHistoricDistricts").innerHTML = "";
+                    console.log(featureCollection.features.length)
                 }
                 else {
                     document.getElementById("historicInfo").innerHTML = "This parcel is locally historically designated. Historical Commission review would be required prior to obtaining zoning or building permits. If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
