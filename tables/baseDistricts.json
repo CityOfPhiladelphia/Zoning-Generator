@@ -180,7 +180,7 @@ var zoningCodeRules = {
      "DESCRIPTION": "Intended to accommodate attached one-family houses on individual lots and some accessory uses.",
      "BY_RIGHT_STRUCTURES": "detached, semi-attached",
      "BY_RIGHT_USES": "single family homes, passive recreation, family child care*, religious assembly, safety services, transit stations, community gardens*, markets or community-supported farms",
-     "USE_NOTE": "Some uses must be in detached buildings. See <a href='http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-602(3)'>14-602(3)(a)[2] <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.",
+     "USE_NOTE": "Some uses must be in detached buildings. See <a href='http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-602(3) target='_blank'>14-602(3)(a)[2] <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.",
      "SPECIAL_EXCEPTION": "group living, active recreation, educational facilities, fraternal organizations, hospitals, libraries and cultural exhibits, utilities and services (basic), wireless service facilities*",
      "CODE": "Table 14-602-1",
      "Code_link": "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_Table14-602-1.A",
