@@ -2459,11 +2459,11 @@ var overlayRules = {
      "PENDING": "Yes",
      "PENDINGBILL": "200349",
      "PENDINGBILLURL": "https://phila.legistar.com/LegislationDetail.aspx?ID=4553769&GUID=235CCE3D-ABB1-4F6A-9BDD-A6CDA29CD83C&Options=ID|Text|&Search=200349",
-     "Version1": null,
+     "Version1": "Applies to lots with frontage along American street that include Multi-Family Household Living uses. Lots must have a non-residential use other than parking along the American Street frontage with some restrictions. 20% of dwelling units must be affordable at the moderate income level of affordability as defined in § 14-702(7). A Registered Community Organization meeting, Marketing and Occupancy Plan, and an Economic Opportunity Plan are required.",
      "For1": null,
      "Version2": null,
      "For2": null,
-     "DoNotInclude": "x" 
+     "DoNotInclude": null 
   },     
   "/BNA Berks and American Overlay District" :
   {
