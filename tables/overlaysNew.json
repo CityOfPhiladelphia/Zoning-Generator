@@ -2423,11 +2423,11 @@ var overlayRules = {
      "PENDING": "Yes",
      "PENDINGBILL": "190830",
      "PENDINGBILLURL": "https://phila.legistar.com/LegislationDetail.aspx?ID=4205010&GUID=36732F95-ED9E-4034-834A-C46EAA4181B2&Options=ID|Text|&Search=190830",
-     "Version1": "The building height limit is 65 ft, except if the zoning district has a lower height limit in the Zoning Code. The Planning Commission must review and approve the facades of new buildings and alterations.",
+     "Version1": "Details coming soon",
      "For1": null,
      "Version2": null,
      "For2": null,
-     "DoNotInclude": "x"
+     "DoNotInclude": null
    },
    "Center City Overlay District - Old City Residential Supplemental Use Controls" :
    {
@@ -2441,11 +2441,11 @@ var overlayRules = {
      "PENDING": "No",
      "PENDINGBILL": "N/A",
      "PENDINGBILLURL": "N/A",
-     "Version1": null,
+     "Version1": "Details coming soon",
      "For1": null,
      "Version2": null,
      "For2": null,
-     "DoNotInclude": "x"
+     "DoNotInclude": null
    },     
    "/AME American Street Overlay District" :
    {
@@ -2477,11 +2477,11 @@ var overlayRules = {
     "PENDING": "Yes",
     "PENDINGBILL": "200350",
     "PENDINGBILLURL": "https://phila.legistar.com/LegislationDetail.aspx?ID=4553770&GUID=E73AC8B7-98A0-4D8A-83C0-502D345E5D97&Options=ID|Text|&Search=200350",
-    "Version1": null,
+    "Version1": "Details coming soon",
     "For1": null,
     "Version2": null,
     "For2": null,
-    "DoNotInclude": "x"
+    "DoNotInclude": null
   },     
   "/NCO Neighborhood Conservation Overlay District - Strawberry Mansion Zone 1" :
   {
@@ -2495,11 +2495,11 @@ var overlayRules = {
     "PENDING": "No",
     "PENDINGBILL": "N/A",
     "PENDINGBILLURL": "N/A",
-    "Version1": null,
+    "Version1": "Details coming soon",
     "For1": null,
     "Version2": null,
     "For2": null,
-    "DoNotInclude": "x"
+    "DoNotInclude": null
   },     
   "/NCO Neighborhood Conservation Overlay District - Strawberry Mansion Zone 2" :
   {
@@ -2513,11 +2513,11 @@ var overlayRules = {
     "PENDING": "No",
     "PENDINGBILL": "N/A",
     "PENDINGBILLURL": "N/A",
-    "Version1": null,
+    "Version1": "Details coming soon",
     "For1": null,
     "Version2": null,
     "For2": null,
-    "DoNotInclude": "x"
+    "DoNotInclude": null
   },     
   "/NCO Neighborhood Conservation Overlay District - Strawberry Mansion Zone 3" :
   {
@@ -2531,10 +2531,10 @@ var overlayRules = {
     "PENDING": "No",
     "PENDINGBILL": "N/A",
     "PENDINGBILLURL": "N/A",
-    "Version1": null,
+    "Version1": "Details coming soon",
     "For1": null,
     "Version2": null,
     "For2": null,
-    "DoNotInclude": "x"
+    "DoNotInclude": null
   }
 }
