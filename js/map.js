@@ -64,6 +64,7 @@ $(function () {
                 else {
                     document.getElementById("historicInfo").innerHTML = "This parcel is locally historically designated. Historical Commission review would be required prior to obtaining zoning or building permits. If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
                     document.getElementById("historicHeading").innerHTML = "Historic Designation"
+                    console.log(featureCollection)
                 }
             });
             var query_historicLocalDistricts = L. esri.query({
@@ -437,7 +438,7 @@ $(function () {
                 var zoningYear = zoningDate.getFullYear();
                 endZoningDate = zoningMonth + "/" + zoningDay + "/" + zoningYear
 
-                document.getElementById("Disclosure").innerHTML="The Zoning Summary Generator Tool is maintained by the Philadelphia Department of Planning and Development. This tool is designed to help property owners, developers, and neighbors understand what may be allowed on a specific property under the Philadelphia Zoning Code.  The base and overlay zoning districts displayed are current as of " + endZoningDate + ", and the text displayed is current as of 2/21/2020. No information here is legally binding, and nothing stated here represents an official opinion of the City of Philadelphia or any of its departments, boards, or commissions. Please review our <a href='terms.html'>Terms of Use</a> for more information.";
+                document.getElementById("Disclosure").innerHTML="The Zoning Summary Generator Tool is maintained by the Philadelphia Department of Planning and Development. This tool is designed to help property owners, developers, and neighbors understand what may be allowed on a specific property under the Philadelphia Zoning Code.  The base and overlay zoning districts displayed are current as of " + endZoningDate + ", and the text displayed is current as of 2/9/2021. No information here is legally binding, and nothing stated here represents an official opinion of the City of Philadelphia or any of its departments, boards, or commissions. Please review our <a href='terms.html'>Terms of Use</a> for more information.";
                 document.getElementById("DisclosureP2").innerHTML="Did you find an error or have a problem using this page? Please send a description of the problem to <a href='mailto:Planning.Development@phila.gov'>Planning.Development@phila.gov</a> or call 215-683-4686 so that we can help you and improve this tool!";
                 var zoningHere = featureCollection.features[0].properties.LONG_CODE;
                 var zoningShort = featureCollection.features[0].properties.CODE;
@@ -524,7 +525,7 @@ $(function () {
                     document.getElementById("theExceptionsTitle").innerHTML = "";
                     document.getElementById("theExceptions").innerHTML = "";
                 }
-                document.getElementById("useStarredNote").innerHTML = "* Use-specific design standards <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-603" + " target='_blank'>" +"(14-603) <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a> may apply.";
+                document.getElementById("useStarredNote").innerHTML = "* Use-specific design standards <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-208554" + " target='_blank'>" +"(14-603) <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a> may apply.";
                 
                 var multiusenote = mydata[zoningShort].MULTIUSE_NOTE;
                 if (multiusenote !== null) {
@@ -547,7 +548,7 @@ $(function () {
                     document.getElementById("acctStructures").innerHTML = "";
                 }
                 if (accStructsCond !== null) {
-                    document.getElementById("accStructsConds").innerHTML = ". Conditions apply or exceptions are required for " + accStructsCond + "; see <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-604 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.";
+                    document.getElementById("accStructsConds").innerHTML = ". Conditions apply or exceptions are required for " + accStructsCond + "; see <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-208755 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.";
                 }
                 else {
                     document.getElementById("accStructsConds").innerHTML = "";
@@ -557,7 +558,7 @@ $(function () {
                 var accUseCon = mydata[zoningShort].ACC_USE_COND;
                 if (permAccessUse !== null) {
                     document.getElementById("permAccessUseheader").innerHTML = "Permitted Accessory Uses: ";
-                    document.getElementById("permAccessUseText").innerHTML = permAccessUse + " are allowed as long as they comply with <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-604 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a> and any other applicable standards. ";
+                    document.getElementById("permAccessUseText").innerHTML = permAccessUse + " are allowed as long as they comply with <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-208755 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a> and any other applicable standards. ";
                 }
                 else {
                     document.getElementById("permAccessUseheader").innerHTML = "";
@@ -565,7 +566,7 @@ $(function () {
                 }
                 
                 if (accUseCon !== null) {
-                    document.getElementById("permAccessUseCond").innerHTML = "Conditions apply or exceptions are required for " + accUseCon + "; see <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-600useregulations?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-604 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.";
+                    document.getElementById("permAccessUseCond").innerHTML = "Conditions apply or exceptions are required for " + accUseCon + "; see <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-208755 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.";
                 }
                 else {
                     document.getElementById("permAccessUseCond").innerHTML = "";
@@ -780,7 +781,7 @@ $(function () {
                 
                 //  Header for Sign Regulations
                 var signstands = mydata[zoningShort].SIGN_CODE;
-                var signCodeLink = "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-900signs?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-904"
+                var signCodeLink = "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-210195"
                 if (signstands !== null){
                     document.getElementById("signLabel").innerHTML = "Sign Regulations" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ signCodeLink + " target='_blank'>" + signstands + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>)</p>";
                 }
@@ -864,7 +865,7 @@ $(function () {
                 
                 createSignTable(zoningShort);
                 var fenceRules = mydata[zoningShort].FENCE_RULES;
-                var fenceLink = "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-700developmentstandards?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-706";
+                var fenceLink = "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-209658";
                 if (fenceRules !== null) {
                     document.getElementById("fencelabel").innerHTML = "Fences" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ fenceLink + " target='_blank'>14-706<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>)</p>";
                     document.getElementById("fencedata").innerHTML = fenceRules;
@@ -874,7 +875,7 @@ $(function () {
                     document.getElementById("fencedata").innerHTML = "";
                 }
                 document.getElementById("otherConcerns").innerHTML = "Other Base Zoning Concerns";
-                document.getElementById("otherConcernDisclaimer").innerHTML = "The zoning code (Title 14 of the Philadelphia Code) contains other provisions and restrictions, including situation-specific sections governing signs <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-900signs?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_Chapter14-900 " + " target='_blank'>" + "(14-900)" + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>" + ", outdoor lighting <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-700developmentstandards?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-707" + " target='_blank'>" + "(14-707) <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>, and subdivisions of land <a href=" + "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-700developmentstandards?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-708" + " target='_blank'>" + "(14-708)<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>. <br /><br />Other regulations that affect building dimensions, locations, and uses may be found in other sections of the Philadelphia Code and are not covered by this summary.";
+                document.getElementById("otherConcernDisclaimer").innerHTML = "The zoning code (Title 14 of the Philadelphia Code) contains other provisions and restrictions, including situation-specific sections governing signs <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-210157 " + " target='_blank'>" + "(14-900)" + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>" + ", outdoor lighting <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-209696" + " target='_blank'>" + "(14-707) <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>, and subdivisions of land <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-209729" + " target='_blank'>" + "(14-708)<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>. <br /><br />Other regulations that affect building dimensions, locations, and uses may be found in other sections of the Philadelphia Code and are not covered by this summary.";
             }
         });
     }
