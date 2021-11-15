@@ -2393,11 +2393,11 @@ var overlayRules = {
      "For2": null,
      "DoNotInclude": null
    },
-   "/S9thSt Market, South Ninth Street Market Overlay District" :
+   "/SNM South Ninth Street Market Overlay District" :
    {
      "OBJECTID": 386,
-     "OVERLAY_NAME": "/S9thSt Market, South Ninth Street Market Overlay District",
-     "OVERLAY_SYMBOL": "/S9thSt Market",
+     "OVERLAY_NAME": "/SNM South Ninth Street Market Overlay District",
+     "OVERLAY_SYMBOL": "/SNM",
      "TYPE": "Overlay District",
      "CODE_SECTION": "14-524",
      "CODE_SECTION_LINK": "http://library.amlegal.com/nxt/gateway.dll/Pennsylvania/philadelphia_pa/title14zoningandplanning/chapter14-500overlayzoningdistricts?f=templates$fn=default.htm$3.0$vid=amlegal:philadelphia_pa$anc=JD_14-525",
