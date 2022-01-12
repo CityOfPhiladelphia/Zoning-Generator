@@ -2627,7 +2627,7 @@ var overlayRules = {
     "For2": null,
     "DoNotInclude": null
   },
-  "//FDO Fourth District Overlay District Commercial Review Areas - Allegheny West" :
+  "/FDO Fourth District Overlay District Commercial Review Areas - Allegheny West" :
   {
     "OBJECTID": 3784,
     "OVERLAY_NAME": "/FDO Fourth District Overlay District Commercial Review Areas - Allegheny West",
