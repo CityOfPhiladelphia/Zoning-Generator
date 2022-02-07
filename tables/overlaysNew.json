@@ -2950,5 +2950,23 @@ var overlayRules = {
     "Version2": null,
     "For2": null,
     "DoNotInclude": null
+  },
+  "/MIN Mixed Income Neighborhoods Overlay District" :
+  {
+    "OBJECTID": 3784,
+    "OVERLAY_NAME": "/MIN Mixed Income Neighborhoods Overlay District",
+    "OVERLAY_SYMBOL": "/NCO",
+    "TYPE": "Overlay District",
+    "CODE_SECTION": "14-504(11)",
+    "CODE_SECTION_LINK": "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-221901",
+    "SUNSET_DATE": null,
+    "PENDING": "No",
+    "PENDINGBILL": "N/A",
+    "PENDINGBILLURL": "N/A",
+    "Version1": "Details coming soon",
+    "For1": null,
+    "Version2": null,
+    "For2": null,
+    "DoNotInclude": null
   }
 }
