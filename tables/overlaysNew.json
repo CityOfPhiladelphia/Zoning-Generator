@@ -2627,7 +2627,7 @@ var overlayRules = {
     "For2": null,
     "DoNotInclude": null
   },
-  "//FDO Fourth District Overlay District Commercial Review Areas - Allegheny West" :
+  "/FDO Fourth District Overlay District Commercial Review Areas - Allegheny West" :
   {
     "OBJECTID": 3784,
     "OVERLAY_NAME": "/FDO Fourth District Overlay District Commercial Review Areas - Allegheny West",
@@ -2923,6 +2923,42 @@ var overlayRules = {
     "TYPE": "Supplemental Control",
     "CODE_SECTION": "14-702-2(7)",
     "CODE_SECTION_LINK": "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-209240",
+    "SUNSET_DATE": null,
+    "PENDING": "No",
+    "PENDINGBILL": "N/A",
+    "PENDINGBILLURL": "N/A",
+    "Version1": "Details coming soon",
+    "For1": null,
+    "Version2": null,
+    "For2": null,
+    "DoNotInclude": null
+  },
+  "/NCO Neighborhood Conservation Overlay District - Strawberry Mansion Zone 5" :
+  {
+    "OBJECTID": 3784,
+    "OVERLAY_NAME": "/NCO Neighborhood Conservation Overlay District - Strawberry Mansion Zone 5",
+    "OVERLAY_SYMBOL": "/NCO",
+    "TYPE": "Overlay District",
+    "CODE_SECTION": "14-504(11)",
+    "CODE_SECTION_LINK": "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-220168",
+    "SUNSET_DATE": null,
+    "PENDING": "No",
+    "PENDINGBILL": "N/A",
+    "PENDINGBILLURL": "N/A",
+    "Version1": "Details coming soon",
+    "For1": null,
+    "Version2": null,
+    "For2": null,
+    "DoNotInclude": null
+  },
+  "/MIN Mixed Income Neighborhoods Overlay District" :
+  {
+    "OBJECTID": 3784,
+    "OVERLAY_NAME": "/MIN Mixed Income Neighborhoods Overlay District",
+    "OVERLAY_SYMBOL": "/NCO",
+    "TYPE": "Overlay District",
+    "CODE_SECTION": "14-504(11)",
+    "CODE_SECTION_LINK": "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-221901",
     "SUNSET_DATE": null,
     "PENDING": "No",
     "PENDINGBILL": "N/A",
