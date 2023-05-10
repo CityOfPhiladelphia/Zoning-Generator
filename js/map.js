@@ -16,11 +16,12 @@ $(function () {
                 overlay_pending = resultFeatures[i].properties.PENDING;
                 overlay_pendingBill = resultFeatures[i].properties.PENDINGBILL;
                 overlay_pendingLink = resultFeatures[i].properties.PENDINGBILLURL;
-                var overlayJSON = overlayRules;
-                var mainText = overlayJSON[overlay_name].Version1;
-                var altText = overlayJSON[overlay_name].Version2;
-                var dontInclude = overlayJSON[overlay_name].DoNotInclude;
-                overlayDict[overlay_name] = [overlay_link, overlay_code, mainText, altText, dontInclude, overlay_pending, overlay_pendingBill, overlay_pendingLink];
+                //var overlayJSON = overlayRules;
+                //var mainText = overlayJSON[overlay_name].Version1;
+                //var altText = overlayJSON[overlay_name].Version2;
+                //var dontInclude = overlayJSON[overlay_name].DoNotInclude;
+//                overlayDict[overlay_name] = [overlay_link, overlay_code, mainText, altText, dontInclude, overlay_pending, overlay_pendingBill, overlay_pendingLink];
+                overlayDict[overlay_name] = [overlay_link, overlay_code, overlay_pending, overlay_pendingBill, overlay_pendingLink];
                 overlayslist[i] = overlay_name;            
             }
         }       
@@ -62,7 +63,7 @@ $(function () {
                     console.log(featureCollection.features.length)
                 }
                 else {
-                    document.getElementById("historicInfo").innerHTML = "This parcel is locally historically designated. Historical Commission review would be required prior to obtaining zoning or building permits. If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
+                    document.getElementById("historicInfo").innerHTML = "This parcel is regulated by the Historical Commission for historic preservation purposes because it is designated as historic or under consideration for designation. The Historical Commission’s review and approval is required to obtain a building permit for the parcel. Nearly 95% of all reviews are conducted by the Historical Commission’s staff, usually within five days. The Historical Commission and its advisory Architectural Committee review the remaining 5% of applications at their monthly meetings."
                     document.getElementById("historicHeading").innerHTML = "Historic Designation"
                     console.log(featureCollection)
                 }
@@ -78,7 +79,7 @@ $(function () {
                     console.log(featureCollection.features.length)
                 }
                 else {
-                    document.getElementById("historicInfo").innerHTML = "This parcel is locally historically designated. Historical Commission review would be required prior to obtaining zoning or building permits. If the structure is deemed to be non-contributing to the district or the proposed alterations are minor and not detrimental, it may be granted as an administrative approval. More significant work on a contributing structure will require review by the full Commission."
+                    document.getElementById("historicInfo").innerHTML = "This parcel is regulated by the Historical Commission for historic preservation purposes because it is designated as historic or under consideration for designation. The Historical Commission’s review and approval is required to obtain a building permit for the parcel. Nearly 95% of all reviews are conducted by the Historical Commission’s staff, usually within five days. The Historical Commission and its advisory Architectural Committee review the remaining 5% of applications at their monthly meetings."
                     document.getElementById("historicHeading").innerHTML = "Historic Designation";
                 }
             })
@@ -106,22 +107,24 @@ $(function () {
                 var name = i;
                 var codenum = "<a href=" + link + " target='_blank'><b>" + overlays[i][1]+ "</b>" + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>";
                 ///Function below adds the the overlay to the overlay table based on the variables determined in the if/else statements for each overlay that has different version.
-                if (overlays[i][4] == null) {
+               // if (overlays[i][4] == null) {
                     function tablesetup() {
                         var row = table.insertRow(x);
                         var codeCell = row.insertCell(0);
                         var nameCell = row.insertCell(1);
-                        var descCell = row.insertCell(2);
-                        codeCell.style.width = '10%';
+                        //var descCell = row.insertCell(2);
+                        //codeCell.style.width = '10%';
+                        codeCell.style.width = '30%';
                         codeCell.style.fontSize = '13px';
-                        nameCell.style.width = '30%';
+                        //nameCell.style.width = '30%';
+                        nameCell.style.width = '60%';
                         nameCell.style.fontSize = '13px';
-                        descCell.style.width = '65%';
-                        descCell.style.fontSize = '13px';
+                        //descCell.style.width = '65%';
+                        //descCell.style.fontSize = '13px';
                         codeCell.href = link;
                         codeCell.innerHTML = codenum;
                         nameCell.innerHTML = name;
-                        descCell.innerHTML = codedesc;
+                        //descCell.innerHTML = codedesc;
                         x++
                         var pendcheck = overlays[i][5];
                         var pendingLink = overlays[i][7];
@@ -129,7 +132,7 @@ $(function () {
                         console.log(pendcheck)
                         overlayAlert(pendcheck, pendingLink, pendingBill)
                     }
-                    if (name == "/CDO Central Delaware Riverfront Overlay District") {//This overlay does not apply to I-P
+                    /* if (name == "/CDO Central Delaware Riverfront Overlay District") {//This overlay does not apply to I-P
                         if (zoningx !== "IP") {
                             var codedesc = overlays[i][2];
                             tablesetup();
@@ -355,8 +358,9 @@ $(function () {
                     else {//All other overlays should use the first version to populate text
                         var codedesc = overlays[i][2];
                         tablesetup();
-                    }
-                }
+                    } */
+                //}
+                tablesetup()
             }
             if (x == 0) {//If, after running through the overlay dictionary no overlays have been added to the table, the heading is blank, otherwise the headings are populated
                 document.getElementById("overlayHeading").innerHTML = "OVERLAY ZONING";
