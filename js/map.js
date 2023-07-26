@@ -529,7 +529,7 @@ $(function () {
                     document.getElementById("theExceptionsTitle").innerHTML = "";
                     document.getElementById("theExceptions").innerHTML = "";
                 }
-                document.getElementById("useStarredNote").innerHTML = "* Use-specific design standards <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-208554" + " target='_blank'>" +"(14-603) <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a> may apply.";
+                document.getElementById("useStarredNote").innerHTML = "* Use-specific design standards <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-292431" + " target='_blank'>" +"(14-603) <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a> may apply.";
                 
                 var multiusenote = mydata[zoningShort].MULTIUSE_NOTE;
                 if (multiusenote !== null) {
@@ -552,7 +552,7 @@ $(function () {
                     document.getElementById("acctStructures").innerHTML = "";
                 }
                 if (accStructsCond !== null) {
-                    document.getElementById("accStructsConds").innerHTML = ". Conditions apply or exceptions are required for " + accStructsCond + "; see <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-208755 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.";
+                    document.getElementById("accStructsConds").innerHTML = ". Conditions apply or exceptions are required for " + accStructsCond + "; see <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-292621 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.";
                 }
                 else {
                     document.getElementById("accStructsConds").innerHTML = "";
@@ -562,7 +562,7 @@ $(function () {
                 var accUseCon = mydata[zoningShort].ACC_USE_COND;
                 if (permAccessUse !== null) {
                     document.getElementById("permAccessUseheader").innerHTML = "Permitted Accessory Uses: ";
-                    document.getElementById("permAccessUseText").innerHTML = permAccessUse + " are allowed as long as they comply with <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-208755 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a> and any other applicable standards. ";
+                    document.getElementById("permAccessUseText").innerHTML = permAccessUse + " are allowed as long as they comply with <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-292621 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a> and any other applicable standards. ";
                 }
                 else {
                     document.getElementById("permAccessUseheader").innerHTML = "";
@@ -570,7 +570,7 @@ $(function () {
                 }
                 
                 if (accUseCon !== null) {
-                    document.getElementById("permAccessUseCond").innerHTML = "Conditions apply or exceptions are required for " + accUseCon + "; see <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-208755 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.";
+                    document.getElementById("permAccessUseCond").innerHTML = "Conditions apply or exceptions are required for " + accUseCon + "; see <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-292621 target='blank'>14-604 <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>.";
                 }
                 else {
                     document.getElementById("permAccessUseCond").innerHTML = "";
@@ -785,7 +785,7 @@ $(function () {
                 
                 //  Header for Sign Regulations
                 var signstands = mydata[zoningShort].SIGN_CODE;
-                var signCodeLink = "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-210195"
+                var signCodeLink = "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-294053"
                 if (signstands !== null){
                     document.getElementById("signLabel").innerHTML = "Sign Regulations" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ signCodeLink + " target='_blank'>" + signstands + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>)</p>";
                 }
@@ -869,7 +869,7 @@ $(function () {
                 
                 createSignTable(zoningShort);
                 var fenceRules = mydata[zoningShort].FENCE_RULES;
-                var fenceLink = "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-209658";
+                var fenceLink = "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-293559";
                 if (fenceRules !== null) {
                     document.getElementById("fencelabel").innerHTML = "Fences" + "<p style='font-size:.60em'>(See also The Philadelphia Code - " + "<a href="+ fenceLink + " target='_blank'>14-706<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>)</p>";
                     document.getElementById("fencedata").innerHTML = fenceRules;
@@ -879,7 +879,7 @@ $(function () {
                     document.getElementById("fencedata").innerHTML = "";
                 }
                 document.getElementById("otherConcerns").innerHTML = "Other Base Zoning Concerns";
-                document.getElementById("otherConcernDisclaimer").innerHTML = "The zoning code (Title 14 of the Philadelphia Code) contains other provisions and restrictions, including situation-specific sections governing signs <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-210157 " + " target='_blank'>" + "(14-900)" + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>" + ", outdoor lighting <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-209696" + " target='_blank'>" + "(14-707) <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>, and subdivisions of land <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-209729" + " target='_blank'>" + "(14-708)<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>. <br /><br />Other regulations that affect building dimensions, locations, and uses may be found in other sections of the Philadelphia Code and are not covered by this summary.";
+                document.getElementById("otherConcernDisclaimer").innerHTML = "The zoning code (Title 14 of the Philadelphia Code) contains other provisions and restrictions, including situation-specific sections governing signs <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-294053 " + " target='_blank'>" + "(14-900)" + "<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>" + ", outdoor lighting <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-293597" + " target='_blank'>" + "(14-707) <i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>, and subdivisions of land <a href=" + "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-293630" + " target='_blank'>" + "(14-708)<i class = 'fas fa-external-link-alt' span style='font-size: 12px'; ></i></a>. <br /><br />Other regulations that affect building dimensions, locations, and uses may be found in other sections of the Philadelphia Code and are not covered by this summary.";
             }
         });
     }

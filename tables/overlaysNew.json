@@ -2536,5 +2536,23 @@ var overlayRules = {
     "Version2": null,
     "For2": null,
     "DoNotInclude": null
+  },
+  "/NCO Neighborhood Conservation Overlay District - Strawberry Mansion Zone 3" :
+  {
+    "OBJECTID": 3784,
+    "OVERLAY_NAME": "/NCO Neighborhood Conservation Overlay District - Strawberry Mansion Zone 3",
+    "OVERLAY_SYMBOL": "/NCO",
+    "TYPE": "Overlay District",
+    "CODE_SECTION": "14-504",
+    "CODE_SECTION_LINK": "https://codelibrary.amlegal.com/codes/philadelphia/latest/philadelphia_pa/0-0-0-207037",
+    "SUNSET_DATE": null,
+    "PENDING": "No",
+    "PENDINGBILL": "N/A",
+    "PENDINGBILLURL": "N/A",
+    "Version1": "Details coming soon",
+    "For1": null,
+    "Version2": null,
+    "For2": null,
+    "DoNotInclude": null
   }
 }
