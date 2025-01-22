@@ -2,7 +2,7 @@ name: Build and deploy to S3
 on:
   push:
     branches:
-      - master
+      - master_x
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
