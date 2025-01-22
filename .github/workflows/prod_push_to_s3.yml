@@ -2,7 +2,7 @@ name: production Build and deploy to S3
 on:
   push:
     branches:
-      - master
+      - master_x
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -15,12 +15,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v4
-      with:
-        role-to-assume: arn:aws:iam::922311303087:role/github-actions@dpd-zoning-summary-generator@master
-        aws-region: us-east-1
     
     - name: Use Node.js 20.x
       uses: actions/setup-node@v4
@@ -35,5 +29,12 @@ jobs:
       env:
         FA_AUTH_TOKEN: ${{ secrets.FA_AUTH_TOKEN }}
 
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::922311303087:role/github-actions@dpd-zoning-summary-generator@master
+        aws-region: us-east-1
+
     - name: Deploy static site to S3 bucket
+      working-directory: ./
       run: aws s3 sync dist s3://dpd-zoning-summary-generator --delete
