@@ -18,5 +18,5 @@ jobs:
         role-to-assume: arn:aws:iam::922311303087:role/github-actions@dpd-zoning-summary-generator@master
         aws-region: us-east-1
     - name: Deploy static site to S3 bucket
-      working-directory: dist
+      working-directory: ./dist
       run: aws s3 sync ./ s3://dpd-zoning-summary-generator --delete
